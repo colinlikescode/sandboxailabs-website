@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 function InboxMock() {
   const rows = [
-    { from: "Sarah Chen", subject: "Q3 board deck — final review", tag: "Needs you", tone: "bg-brand text-white" },
+    { from: "Sarah Chen", subject: "Q3 board deck: final review", tag: "Needs you", tone: "bg-brand text-white" },
     { from: "Delta", subject: "Your upgrade is confirmed", tag: "Filed", tone: "bg-white/10 text-white/70" },
     { from: "Marcus (Sequoia)", subject: "Coffee next week?", tag: "Replied", tone: "bg-emerald-500/20 text-emerald-300" },
     { from: "Legal", subject: "NDA redlines v3", tag: "Summarized", tone: "bg-sky-500/20 text-sky-300" },
@@ -29,7 +29,7 @@ function InboxMock() {
 
 function CalendarMock() {
   const blocks = [
-    { time: "8:00", title: "Deep work — strategy memo", h: "h-20", tone: "bg-indigo-500/80", lock: true },
+    { time: "8:00", title: "Deep work: strategy memo", h: "h-20", tone: "bg-indigo-500/80", lock: true },
     { time: "10:00", title: "1:1 with Priya", h: "h-10", tone: "bg-white/15" },
     { time: "11:00", title: "Investor call · prep brief attached", h: "h-14", tone: "bg-brand/90" },
     { time: "12:30", title: "Lunch (protected)", h: "h-10", tone: "bg-emerald-500/70", lock: true },
@@ -82,7 +82,7 @@ function TravelMock() {
           </div>
         </div>
       </div>
-      {["Car to SFO booked — 5:30 AM", "The Greenwich Hotel · 2 nights", "Dinner at Carbone · 8:00 PM, party of 4"].map((t) => (
+      {["Car to SFO booked · 5:30 AM", "The Greenwich Hotel · 2 nights", "Dinner at Carbone · 8:00 PM, party of 4"].map((t) => (
         <div key={t} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm backdrop-blur-xl">
           <span className="grid size-6 place-items-center rounded-full bg-emerald-500/20">
             <Check className="size-3.5 text-emerald-300" />
@@ -115,7 +115,7 @@ const panels = [
     eyebrow: "Travel",
     icon: Plane,
     title: "Travel, booked.",
-    body: "Flights, hotels, cars, and dinner reservations — rebooked automatically when plans change. You just show up.",
+    body: "Flights, hotels, cars, and dinner reservations, rebooked automatically when plans change. You just show up.",
     bg: "bg-[radial-gradient(ellipse_at_15%_50%,oklch(0.35_0.1_200),black_60%)]",
     mock: <TravelMock />,
   },

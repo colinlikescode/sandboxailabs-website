@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sandbox — Your personal executive assistant agent",
+  title: "Sandbox | Your personal executive assistant agent",
   description:
-    "Sandbox AI Labs builds personal agents that run your inbox, calendar, travel, and errands — so you can run everything else.",
+    "Sandbox AI Labs builds personal agents that run your inbox, calendar, travel, and errands, so you can run everything else.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

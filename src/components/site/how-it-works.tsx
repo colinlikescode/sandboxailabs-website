@@ -3,7 +3,7 @@ import { KeyRound, Lock, ShieldCheck, Sparkles, UserCheck, Workflow } from "luci
 const steps = [
   { icon: KeyRound, title: "Connect", body: "Link Gmail, Calendar, Slack, and cards in 90 seconds. Scoped, revocable access." },
   { icon: Sparkles, title: "Brief", body: "Ava learns your voice, priorities, and preferences from a 10-minute intro call." },
-  { icon: Workflow, title: "Delegate", body: "Hand off anything by text, voice, or email. Ava acts — and checks in when it matters." },
+  { icon: Workflow, title: "Delegate", body: "Hand off anything by text, voice, or email. Ava acts and checks in when it matters." },
 ];
 
 const trust = [

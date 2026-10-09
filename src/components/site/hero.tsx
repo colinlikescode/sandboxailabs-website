@@ -66,7 +66,7 @@ export function Hero() {
         <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">Meet Ava.</h1>
         <p className="mt-4 max-w-xl text-lg text-white/70 sm:text-xl">
           A personal executive assistant agent that runs your inbox, calendar,
-          and life logistics — so you can run everything else.
+          and life logistics, so you can run everything else.
         </p>
       </div>
 
