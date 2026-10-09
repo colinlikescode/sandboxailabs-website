@@ -16,12 +16,12 @@ export function Reserve() {
         Get your time back.
       </h2>
       <p className="mx-auto mt-6 max-w-md text-lg text-white/60">
-        Reserve Ava today. Onboarding opens in waves.
+        Join the waitlist. We onboard in waves and will email you as soon as you&apos;re off the list.
       </p>
 
       {done ? (
         <p className="mx-auto mt-10 flex w-fit items-center gap-2 rounded-full bg-white/10 px-5 py-3 text-sm backdrop-blur">
-          <Check className="size-4 text-emerald-400" /> You&apos;re on the list. Ava will email you shortly.
+          <Check className="size-4 shrink-0 text-emerald-400" /> You&apos;re on the waitlist. We&apos;ll email {email} when your spot opens.
         </p>
       ) : (
         <form
@@ -40,7 +40,7 @@ export function Reserve() {
             className="h-11 border-0 bg-transparent pl-5 text-black shadow-none focus-visible:ring-0"
           />
           <Button type="submit" className="h-11 shrink-0 rounded-full bg-brand px-6 text-white hover:bg-brand/90">
-            Reserve <ArrowRight className="size-4" />
+            Join waitlist <ArrowRight className="size-4" />
           </Button>
         </form>
       )}
