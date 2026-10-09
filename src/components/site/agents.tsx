@@ -10,7 +10,6 @@ import {
   Plane,
   Receipt,
   Search,
-  Star,
   Users,
   type LucideIcon,
 } from "lucide-react";
@@ -32,9 +31,6 @@ type Agent = {
   name: string;
   role: string;
   category: string;
-  rating: number;
-  reviews: number;
-  price: number;
   tagline: string;
   gradient: string;
   badge?: string;
@@ -42,14 +38,14 @@ type Agent = {
 };
 
 const agents: Agent[] = [
-  { name: "Ava", role: "Executive Assistant", category: "ops", rating: 4.98, reviews: 2841, price: 49, tagline: "Runs your day end-to-end", gradient: "from-rose-500 via-fuchsia-500 to-indigo-600", badge: "Guest favorite", initials: "AV" },
-  { name: "Milo", role: "Inbox Concierge", category: "inbox", rating: 4.95, reviews: 1920, price: 19, tagline: "Inbox zero by 9 AM, daily", gradient: "from-amber-400 via-orange-500 to-rose-500", initials: "MI" },
-  { name: "Juno", role: "Calendar Guardian", category: "calendar", rating: 4.97, reviews: 1533, price: 19, tagline: "Defends your deep-work blocks", gradient: "from-emerald-400 via-teal-500 to-sky-600", badge: "New", initials: "JU" },
-  { name: "Atlas", role: "Travel Desk", category: "travel", rating: 4.96, reviews: 988, price: 29, tagline: "Books, rebooks, upgrades", gradient: "from-sky-400 via-blue-600 to-violet-700", initials: "AT" },
-  { name: "Penny", role: "Expense Closer", category: "finance", rating: 4.93, reviews: 712, price: 15, tagline: "Receipts matched, reports filed", gradient: "from-lime-300 via-emerald-500 to-teal-700", initials: "PE" },
-  { name: "Sage", role: "Research Analyst", category: "research", rating: 4.94, reviews: 640, price: 39, tagline: "Briefs before every meeting", gradient: "from-violet-400 via-purple-600 to-slate-900", initials: "SA" },
-  { name: "Remy", role: "Relationship Keeper", category: "people", rating: 4.92, reviews: 455, price: 15, tagline: "Never miss a follow-up or birthday", gradient: "from-pink-300 via-rose-400 to-orange-400", initials: "RE" },
-  { name: "Nova", role: "Chief of Staff", category: "ops", rating: 4.99, reviews: 302, price: 99, tagline: "Coordinates your whole team", gradient: "from-zinc-200 via-zinc-500 to-zinc-900", badge: "Superagent", initials: "NO" },
+  { name: "Ava", role: "Executive Assistant", category: "ops", tagline: "Runs your day end-to-end", gradient: "from-rose-500 via-fuchsia-500 to-indigo-600", badge: "Most hired", initials: "AV" },
+  { name: "Milo", role: "Inbox Concierge", category: "inbox", tagline: "Inbox zero by 9 AM, daily", gradient: "from-amber-400 via-orange-500 to-rose-500", initials: "MI" },
+  { name: "Juno", role: "Calendar Guardian", category: "calendar", tagline: "Defends your deep-work blocks", gradient: "from-emerald-400 via-teal-500 to-sky-600", badge: "New", initials: "JU" },
+  { name: "Atlas", role: "Travel Desk", category: "travel", tagline: "Books, rebooks, upgrades", gradient: "from-sky-400 via-blue-600 to-violet-700", initials: "AT" },
+  { name: "Penny", role: "Expense Closer", category: "finance", tagline: "Receipts matched, reports filed", gradient: "from-lime-300 via-emerald-500 to-teal-700", initials: "PE" },
+  { name: "Sage", role: "Research Analyst", category: "research", tagline: "Briefs before every meeting", gradient: "from-violet-400 via-purple-600 to-slate-900", initials: "SA" },
+  { name: "Remy", role: "Relationship Keeper", category: "people", tagline: "Never miss a follow-up or birthday", gradient: "from-pink-300 via-rose-400 to-orange-400", initials: "RE" },
+  { name: "Nova", role: "Chief of Staff", category: "ops", tagline: "Coordinates your whole team", gradient: "from-zinc-200 via-zinc-500 to-zinc-900", badge: "Superagent", initials: "NO" },
 ];
 
 export function Agents() {
@@ -76,7 +72,7 @@ export function Agents() {
           </h2>
         </div>
         <p className="max-w-sm text-muted-foreground">
-          Every agent is trained for one job, then works with the others as a team. Mix and match — cancel anytime.
+          Every agent is trained for one job, then works with the others as a team. Mix and match.
         </p>
       </div>
 
@@ -136,21 +132,9 @@ export function Agents() {
                 />
               </button>
             </div>
-            <div className="mt-3 flex items-start justify-between gap-2">
-              <div>
-                <h3 className="font-semibold">
-                  {a.name} · <span className="font-normal">{a.role}</span>
-                </h3>
-                <p className="text-sm text-muted-foreground">{a.reviews.toLocaleString()} executives served</p>
-              </div>
-              <p className="flex shrink-0 items-center gap-1 text-sm">
-                <Star className="size-3.5 fill-foreground" />
-                {a.rating.toFixed(2)}
-              </p>
-            </div>
-            <p className="mt-1 text-sm">
-              <span className="font-semibold">${a.price}</span> / month
-            </p>
+            <h3 className="mt-3 font-semibold">
+              {a.name} · <span className="font-normal">{a.role}</span>
+            </h3>
           </article>
         ))}
       </div>

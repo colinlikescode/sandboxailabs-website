@@ -1,7 +1,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const faqs = [
-  { q: "Is Ava a real person?", a: "No. Ava is an AI agent built by Sandbox AI Labs. For edge cases, Executive and Office plans include escalation to a vetted human assistant." },
+  { q: "Is Ava a real person?", a: "No. Ava is an AI agent built by Sandbox AI Labs. For edge cases, Ava can escalate to a vetted human assistant." },
   { q: "What can Ava actually do on my behalf?", a: "Send and reply to email, schedule and reschedule meetings, book travel and restaurants, file expenses, research people and companies, and coordinate with other people's assistants — within the limits you set." },
   { q: "How does Ava learn my preferences?", a: "From a short intro call, your past emails and calendar patterns, and every correction you make. Preferences are stored in a private memory you can view and edit." },
   { q: "Will Ava spend money without asking?", a: "Only up to the spend cap you choose. Anything above it — or anything you mark as sensitive — requires a one-tap approval." },

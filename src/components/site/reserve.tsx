@@ -16,7 +16,7 @@ export function Reserve() {
         Get your time back.
       </h2>
       <p className="mx-auto mt-6 max-w-md text-lg text-white/60">
-        Reserve Ava today. Onboarding opens in waves — first 1,000 reservations get 3 months free.
+        Reserve Ava today. Onboarding opens in waves.
       </p>
 
       {done ? (
@@ -44,7 +44,6 @@ export function Reserve() {
           </Button>
         </form>
       )}
-      <p className="mt-4 text-xs text-white/40">$0 today · Refundable · Cancel anytime</p>
     </section>
   );
 }

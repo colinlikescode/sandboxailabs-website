@@ -5,8 +5,6 @@ import { Agents } from "@/components/site/agents";
 import { Capabilities } from "@/components/site/capabilities";
 import { Demo } from "@/components/site/demo";
 import { HowItWorks } from "@/components/site/how-it-works";
-import { Pricing } from "@/components/site/pricing";
-import { Testimonials } from "@/components/site/testimonials";
 import { Faq } from "@/components/site/faq";
 import { Reserve } from "@/components/site/reserve";
 import { Footer } from "@/components/site/footer";
@@ -22,8 +20,6 @@ export default function Home() {
         <Capabilities />
         <Demo />
         <HowItWorks />
-        <Testimonials />
-        <Pricing />
         <Faq />
         <Reserve />
       </main>
