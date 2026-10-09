@@ -37,9 +37,9 @@ export function Reserve() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@company.com"
-            className="h-11 border-0 bg-transparent pl-5 text-black shadow-none focus-visible:ring-0"
+            className="h-11 min-w-0 border-0 bg-transparent pl-4 sm:pl-5 text-black shadow-none focus-visible:ring-0"
           />
-          <Button type="submit" className="h-11 shrink-0 rounded-full bg-brand px-6 text-white hover:bg-brand/90">
+          <Button type="submit" className="h-11 shrink-0 rounded-full bg-brand px-4 text-white sm:px-6 hover:bg-brand/90">
             Join waitlist <ArrowRight className="size-4" />
           </Button>
         </form>

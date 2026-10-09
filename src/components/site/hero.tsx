@@ -9,19 +9,19 @@ const floating = [
     icon: Mail,
     title: "Inbox cleared",
     body: "142 emails triaged · 6 need you",
-    className: "left-[4%] top-[28%] [animation-delay:0s]",
+    className: "left-6 top-[10%] [animation-delay:0s]",
   },
   {
     icon: CalendarCheck,
     title: "Board prep moved",
     body: "Thu 9:00 → Fri 8:30, all confirmed",
-    className: "right-[5%] top-[22%] [animation-delay:1.5s]",
+    className: "right-6 top-0 [animation-delay:1.5s]",
   },
   {
     icon: Plane,
     title: "SFO → JFK booked",
     body: "Aisle, 7:05 AM, Delta One · $612",
-    className: "left-[3%] bottom-[34%] [animation-delay:3s]",
+    className: "right-10 bottom-[8%] [animation-delay:3s]",
   },
 ];
 
@@ -36,29 +36,7 @@ export function Hero() {
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
       </div>
 
-      <HeroOrb />
-
-      {floating.map(({ icon: Icon, title, body, className }) => (
-        <div
-          key={title}
-          className={cn(
-            "absolute hidden w-64 animate-float rounded-2xl border border-white/10 bg-white/[0.06] p-4 backdrop-blur-xl lg:block",
-            className
-          )}
-        >
-          <div className="flex items-start gap-3">
-            <div className="grid size-9 shrink-0 place-items-center rounded-xl bg-white/10">
-              <Icon className="size-4" />
-            </div>
-            <div>
-              <p className="text-sm font-medium">{title}</p>
-              <p className="mt-0.5 text-xs text-white/60">{body}</p>
-            </div>
-          </div>
-        </div>
-      ))}
-
-      <div className="mt-[18vh] flex animate-fade-up flex-col items-center px-6 text-center">
+      <div className="flex animate-fade-up flex-col items-center px-6 pt-[clamp(6rem,13svh,9rem)] text-center">
         <p className="mb-5 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium tracking-wide text-white/80 backdrop-blur">
           <span className="mr-2 inline-block size-1.5 rounded-full bg-emerald-400 align-middle" />
           Waitlist now open
@@ -70,7 +48,30 @@ export function Hero() {
         </p>
       </div>
 
-      <div className="mt-auto flex w-full flex-col items-center gap-8 px-6 pb-14">
+      <div className="relative w-full max-w-6xl flex-1 min-h-[clamp(220px,32svh,420px)]">
+        <HeroOrb />
+        {floating.map(({ icon: Icon, title, body, className }) => (
+          <div
+            key={title}
+            className={cn(
+              "absolute hidden w-60 animate-float rounded-2xl border border-white/10 bg-white/[0.06] p-4 backdrop-blur-xl lg:block",
+              className
+            )}
+          >
+            <div className="flex items-start gap-3">
+              <div className="grid size-9 shrink-0 place-items-center rounded-xl bg-white/10">
+                <Icon className="size-4" />
+              </div>
+              <div>
+                <p className="text-sm font-medium">{title}</p>
+                <p className="mt-0.5 text-xs text-white/60">{body}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="flex w-full flex-col items-center gap-6 px-6 pb-10 sm:gap-8">
         <DelegateBar />
         <div className="flex w-full max-w-md flex-col gap-3 sm:flex-row">
           <a
@@ -92,7 +93,7 @@ export function Hero() {
             Watch it work
           </a>
         </div>
-        <a href="#stats" aria-label="Scroll down" className="text-white/50 hover:text-white">
+        <a href="#stats" aria-label="Scroll down" className="text-white/50 hover:text-white [@media(max-height:820px)]:hidden">
           <ChevronDown className="size-6 animate-bounce" />
         </a>
       </div>

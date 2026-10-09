@@ -64,7 +64,7 @@ export function Agents() {
 
   return (
     <section id="agents" className="mx-auto w-full max-w-7xl px-6 py-24">
-      <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+      <div className="mb-10 flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
         <div>
           <p className="text-sm font-semibold text-brand">The agent marketplace</p>
           <h2 className="mt-2 text-4xl font-semibold tracking-tight sm:text-5xl">

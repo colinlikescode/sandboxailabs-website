@@ -145,8 +145,6 @@ export default function AgentOrb() {
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 100);
-    camera.position.z = 9.5;
-
     const group = new THREE.Group();
     scene.add(group);
 
@@ -209,6 +207,8 @@ export default function AgentOrb() {
       renderer.domElement.style.width = "100%";
       renderer.domElement.style.height = "100%";
       camera.aspect = w / h;
+      const halfTan = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+      camera.position.z = Math.max(1.75 / halfTan, 2.1 / (halfTan * camera.aspect), h / (300 * halfTan));
       camera.updateProjectionMatrix();
     };
     resize();
