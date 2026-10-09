@@ -12,7 +12,7 @@ const scenarios: { id: string; label: string; messages: Msg[] }[] = [
     label: "Plan an offsite",
     messages: [
       { from: "you", text: "Plan a 2-day leadership offsite in Napa for 8 people, sometime in November." },
-      { from: "ava", text: "On it. Nov 12–13 works for all 8 calendars. I shortlisted 3 venues under $40k.", actions: ["Checked 8 calendars", "Held Nov 12–13", "Requested 3 venue quotes"] },
+      { from: "ava", text: "On it. Nov 12-13 works for all 8 calendars. I shortlisted 3 venues under $40k.", actions: ["Checked 8 calendars", "Held Nov 12-13", "Requested 3 venue quotes"] },
       { from: "you", text: "Go with Auberge. Add a wine tasting." },
       { from: "ava", text: "Booked Auberge du Soleil + private tasting at Stag's Leap. Invites, agenda, and car service sent.", actions: ["Contract signed via DocuSign", "Invites sent", "Budget: $36,420"] },
     ],
