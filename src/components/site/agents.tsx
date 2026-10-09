@@ -38,7 +38,7 @@ type Agent = {
 };
 
 const agents: Agent[] = [
-  { name: "Ava", role: "Executive Assistant", category: "ops", tagline: "Runs your day end-to-end", gradient: "from-rose-500 via-fuchsia-500 to-indigo-600", badge: "Most hired", initials: "AV" },
+  { name: "Ava", role: "Executive Assistant", category: "ops", tagline: "Runs your day end-to-end", gradient: "from-rose-500 via-fuchsia-500 to-indigo-600", badge: "Flagship", initials: "AV" },
   { name: "Milo", role: "Inbox Concierge", category: "inbox", tagline: "Inbox zero by 9 AM, daily", gradient: "from-amber-400 via-orange-500 to-rose-500", initials: "MI" },
   { name: "Juno", role: "Calendar Guardian", category: "calendar", tagline: "Defends your deep-work blocks", gradient: "from-emerald-400 via-teal-500 to-sky-600", badge: "New", initials: "JU" },
   { name: "Atlas", role: "Travel Desk", category: "travel", tagline: "Books, rebooks, upgrades", gradient: "from-sky-400 via-blue-600 to-violet-700", initials: "AT" },
@@ -68,7 +68,7 @@ export function Agents() {
         <div>
           <p className="text-sm font-semibold text-brand">The agent marketplace</p>
           <h2 className="mt-2 text-4xl font-semibold tracking-tight sm:text-5xl">
-            Hire an assistant in minutes.
+            A team of specialist agents.
           </h2>
         </div>
         <p className="max-w-sm text-muted-foreground">

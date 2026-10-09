@@ -100,7 +100,7 @@ const panels = [
     icon: Mail,
     title: "Inbox, handled.",
     body: "Ava reads everything, replies in your voice, and only surfaces what truly needs you. Most executives go from 300 emails to 6.",
-    bg: "bg-[radial-gradient(ellipse_at_top_left,oklch(0.35_0.12_15),black_60%)]",
+    bg: "bg-[radial-gradient(ellipse_at_15%_50%,oklch(0.35_0.12_15),black_60%)]",
     mock: <InboxMock />,
   },
   {
@@ -108,7 +108,7 @@ const panels = [
     icon: Clock,
     title: "Calendar, defended.",
     body: "Negotiates meeting times across time zones, protects focus blocks, and drops a prep brief in every invite.",
-    bg: "bg-[radial-gradient(ellipse_at_top_right,oklch(0.35_0.15_280),black_60%)]",
+    bg: "bg-[radial-gradient(ellipse_at_85%_50%,oklch(0.35_0.15_280),black_60%)]",
     mock: <CalendarMock />,
   },
   {
@@ -116,7 +116,7 @@ const panels = [
     icon: Plane,
     title: "Travel, booked.",
     body: "Flights, hotels, cars, and dinner reservations — rebooked automatically when plans change. You just show up.",
-    bg: "bg-[radial-gradient(ellipse_at_bottom_left,oklch(0.35_0.1_200),black_60%)]",
+    bg: "bg-[radial-gradient(ellipse_at_15%_50%,oklch(0.35_0.1_200),black_60%)]",
     mock: <TravelMock />,
   },
 ];
@@ -125,10 +125,10 @@ export function Capabilities() {
   return (
     <section id="capabilities" className="bg-black text-white">
       {panels.map((p, i) => (
-        <div key={p.title} className={cn("relative flex min-h-svh items-center overflow-hidden", p.bg)}>
+        <div key={p.title} className={cn("relative flex min-h-[85svh] items-center overflow-hidden", p.bg)}>
           <div
             className={cn(
-              "mx-auto grid w-full max-w-7xl items-center gap-16 px-6 py-24 lg:grid-cols-2",
+              "mx-auto grid w-full max-w-7xl items-center gap-16 px-6 py-28 lg:grid-cols-2",
               i % 2 === 1 && "lg:[&>*:first-child]:order-2"
             )}
           >

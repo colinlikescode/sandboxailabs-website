@@ -54,12 +54,12 @@ export function Demo() {
         </div>
 
         <Tabs defaultValue="offsite" className="mt-12 items-center">
-          <TabsList className="h-11 rounded-full bg-white p-1 shadow-sm ring-1 ring-border">
+          <TabsList className="h-11 max-w-full justify-start overflow-x-auto rounded-full bg-white p-1 shadow-sm ring-1 ring-border [scrollbar-width:none]">
             {scenarios.map((s) => (
               <TabsTrigger
                 key={s.id}
                 value={s.id}
-                className="rounded-full px-4 data-active:bg-black data-active:text-white"
+                className="flex-none rounded-full px-3 sm:px-4 data-active:bg-black data-active:text-white"
               >
                 {s.label}
               </TabsTrigger>

@@ -13,14 +13,13 @@ const segments = [
 export function DelegateBar() {
   const [active, setActive] = useState<string | null>(null);
   const [values, setValues] = useState<Record<string, string>>({});
-  const [sent, setSent] = useState(false);
 
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        setSent(true);
-        setTimeout(() => setSent(false), 2400);
+        document.getElementById("reserve")?.scrollIntoView({ behavior: "smooth" });
+        document.querySelector<HTMLInputElement>("#reserve input")?.focus({ preventScroll: true });
       }}
       className={cn(
         "flex w-full max-w-3xl items-center rounded-full border border-white/15 bg-white p-2 text-black shadow-[0_20px_60px_-15px_rgba(0,0,0,0.6)] transition-colors",
@@ -54,13 +53,11 @@ export function DelegateBar() {
         type="submit"
         className={cn(
           "ml-1 flex h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-brand text-white transition-all hover:brightness-110",
-          active || sent ? "px-5" : "w-12"
+          active ? "px-5" : "w-12"
         )}
       >
         <Search className="size-4" strokeWidth={3} />
-        {(active || sent) && (
-          <span className="text-sm font-semibold">{sent ? "Ava's on it" : "Hand off"}</span>
-        )}
+        {active && <span className="text-sm font-semibold">Hand off</span>}
       </button>
     </form>
   );

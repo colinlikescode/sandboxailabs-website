@@ -73,7 +73,7 @@ export function Navbar() {
               "h-9 rounded-full bg-brand px-5 text-white hover:bg-brand/90"
             )}
           >
-            Reserve
+            Join waitlist
           </a>
         </div>
 

@@ -21,7 +21,7 @@ const floating = [
     icon: Plane,
     title: "SFO → JFK booked",
     body: "Aisle, 7:05 AM, Delta One · $612",
-    className: "right-[9%] bottom-[24%] [animation-delay:3s]",
+    className: "left-[3%] bottom-[34%] [animation-delay:3s]",
   },
 ];
 
@@ -61,7 +61,7 @@ export function Hero() {
       <div className="mt-[18vh] flex animate-fade-up flex-col items-center px-6 text-center">
         <p className="mb-5 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium tracking-wide text-white/80 backdrop-blur">
           <span className="mr-2 inline-block size-1.5 rounded-full bg-emerald-400 align-middle" />
-          Now accepting reservations for Ava 2
+          Waitlist now open
         </p>
         <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">Meet Ava.</h1>
         <p className="mt-4 max-w-xl text-lg text-white/70 sm:text-xl">
@@ -77,16 +77,16 @@ export function Hero() {
             href="#reserve"
             className={cn(
               buttonVariants({ size: "lg" }),
-              "h-11 flex-1 rounded-md bg-white text-sm text-black hover:bg-white/90"
+              "h-11 w-full rounded-md sm:w-auto sm:flex-1 bg-white text-sm text-black hover:bg-white/90"
             )}
           >
-            Reserve your agent
+            Join the waitlist
           </a>
           <a
             href="#demo"
             className={cn(
               buttonVariants({ size: "lg" }),
-              "h-11 flex-1 rounded-md bg-white/10 text-sm text-white backdrop-blur hover:bg-white/20"
+              "h-11 w-full rounded-md sm:w-auto sm:flex-1 bg-white/10 text-sm text-white backdrop-blur hover:bg-white/20"
             )}
           >
             Watch it work

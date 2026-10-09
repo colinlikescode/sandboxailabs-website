@@ -36,7 +36,6 @@ export function Footer() {
         <Separator className="my-8" />
         <div className="flex flex-col justify-between gap-4 text-muted-foreground md:flex-row">
           <p>© 2026 Sandbox AI Labs, Inc. · Privacy · Terms · Sitemap</p>
-          <p>English (US) · $ USD</p>
         </div>
       </div>
     </footer>
