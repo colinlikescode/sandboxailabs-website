@@ -2,6 +2,7 @@ import { CalendarCheck, Mail, Plane, ChevronDown } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { DelegateBar } from "./delegate-bar";
+import { HeroOrb } from "./hero-orb";
 
 const floating = [
   {
@@ -35,13 +36,7 @@ export function Hero() {
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
       </div>
 
-      <div className="pointer-events-none absolute left-1/2 top-[58%] -z-10 -translate-x-1/2 -translate-y-1/2">
-        <div className="relative size-[min(46vw,420px)]">
-          <div className="absolute inset-0 animate-[spin_30s_linear_infinite] rounded-full border border-white/10" />
-          <div className="absolute inset-8 animate-[spin_22s_linear_infinite_reverse] rounded-full border border-dashed border-white/15" />
-          <div className="absolute inset-[22%] rounded-full bg-[radial-gradient(circle_at_35%_30%,#fff_0%,oklch(0.75_0.17_15)_25%,oklch(0.5_0.22_10)_60%,oklch(0.2_0.1_300)_100%)] shadow-[0_0_120px_40px_oklch(0.64_0.23_15/0.45)]" />
-        </div>
-      </div>
+      <HeroOrb />
 
       {floating.map(({ icon: Icon, title, body, className }) => (
         <div

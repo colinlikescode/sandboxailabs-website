@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Logo } from "./logo";
 
 const links = [
   { href: "#agents", label: "Agents" },
@@ -35,11 +36,8 @@ export function Navbar() {
       )}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <a href="#" className="flex items-center gap-2 text-[15px] font-semibold tracking-[0.35em]">
-          <span className="grid size-7 place-items-center rounded-full bg-brand text-[11px] tracking-normal text-white">
-            S
-          </span>
-          SANDBOX
+        <a href="#" aria-label="Sandbox home">
+          <Logo />
         </a>
 
         <ul className="hidden items-center gap-1 md:flex">

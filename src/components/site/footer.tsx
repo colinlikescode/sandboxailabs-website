@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator";
+import { Logo } from "./logo";
 
 const columns = [
   { title: "Product", links: ["Ava", "Specialist agents", "Integrations", "Security", "Changelog"] },
@@ -12,10 +13,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-14">
         <div className="grid gap-10 md:grid-cols-4">
           <div>
-            <p className="flex items-center gap-2 font-semibold tracking-[0.35em]">
-              <span className="grid size-7 place-items-center rounded-full bg-brand text-[11px] tracking-normal text-white">S</span>
-              SANDBOX
-            </p>
+            <Logo />
             <p className="mt-4 max-w-xs text-muted-foreground">
               Building personal agents that give people their time back.
             </p>
